@@ -1,0 +1,18 @@
+<h1>Home Page</h1>
+<h2>What is your Name</h2>
+
+
+<input id="UserInput"> <br> <br>
+<button onclick="myFunction()"> submit </button>
+
+
+<p id="message">   </p>
+
+<script>
+    function myFunction() {
+        let UserInput = document.querySelector("#UserInput");
+        let message = document.querySelector("#message");
+
+        message.innerHTML = "Welcome To the games " + UserInput.value;
+}
+</script>
