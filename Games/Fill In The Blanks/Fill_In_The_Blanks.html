@@ -1,49 +1,19 @@
 <head> 
-<!-- Name And Header -->
+<!-- Name And Header 
 <title>Fill In The Blanks</title>
 </head>
 <head>
-<!-- Linking python game into html -->
-<!--<link type="hreflang" -->
-</head>
-<!-- <body>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-</head>
-<body>
-    <py-script>
-x = input('This is a test to see if python can work in html:' )
-if x == ('yes'):
-    print('correct')
-        
-else:
-    print('wrong')
-    </py-script>
-</body>
-<h2>
-<a href="Fill_In_The_Blanks.html">Reload</a>
-</h2>
-</body> -->
 
 <h1>Fill Out The Blanks</h1>
 <h2>1st Question</h2>
 <input id="UserInput">
 <button onclick="myFunction()"> See if its right </button>
-<h1 id="message">   </h1>
+<h1 id="message">  good job </h1>
+--> 
 
-<!-- else if (x === 10) {
-    document.getElementById("output").innerHTML = "x is equal to 10.";
-} -->
-<script>
-    function myFunction() {
-        let UserInput = document.querySelector("#UserInput");
-        let message = document.querySelector("#message");
-        message.innerHTML = "text " + UserInput.value
-        if (UserInput = 'yes') {
-        document.getElementById("output").innerHTML = "it works";
-        } else {
-        document.getElementById("output").innerHTML = "wrong";
-        }
-}
-</script>
+<form action="/login_post" method="post">
+    username: <input type="text" name="username">
+    <input type="submit">
+</form> 
+
 
