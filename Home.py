@@ -2,10 +2,11 @@ from flask import *
 
 app = Flask(__name__)
 
-@app.route('/', methods=['post'])
+@app.route('/')
 def index():
     return render_template('index.html')
 
+#s@app.route('/postanswer')
 #@app.route('/')
 #def index():
     #x = input('Question 1: ')
