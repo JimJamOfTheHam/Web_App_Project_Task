@@ -1,15 +1,6 @@
-n  .bordered {
-    border: 2px dashed red;
-  }
 
-  .bordered {
-    border: 2px solid blue;
-    border-radius: 10px; /* Creates rounded corners */
-  }
 
-  .bordered {
-    border-left: 3px dotted green;
-    border-right: 3px dashed orange;
-  }
-
-  
+  h1 {
+    background-color: red;
+      text-align: center;
+    }
