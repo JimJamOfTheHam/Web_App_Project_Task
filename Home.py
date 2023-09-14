@@ -6,7 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-#s@app.route('/postanswer')
+@app.route('/postanwser')
+def get_postanwer():
+    return render_template('index.html')
 #@app.route('/')
 #def index():
     #x = input('Question 1: ')
