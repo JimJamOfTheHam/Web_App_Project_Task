@@ -6,13 +6,21 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/questions')
+def index():
+    return render_template('Fill_In_The_Blanks.html')
+
 @app.post('/postanswer')
 def get_postanwer():
+    x = request.form['message']
+    print(f'user typed {x}')
+
+
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
 #def index():
     #x = input('Question 1: ')
-    #if x == ('Q'):
+    #if x == 'Q':
         #print ('Question')
     #else:
         #print("why not")
