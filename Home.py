@@ -7,7 +7,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/questions')
-def index():
+def questions():
     return render_template('Fill_In_The_Blanks.html')
 
 @app.post('/postanswer')
