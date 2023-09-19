@@ -8,7 +8,7 @@ def index():
 
 @app.route('/postanwser')
 def get_postanwer():
-    return render_template('index.html')
+    return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
 #def index():
     #x = input('Question 1: ')
