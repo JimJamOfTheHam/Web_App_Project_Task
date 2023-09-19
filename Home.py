@@ -13,8 +13,8 @@ def questions():
 @app.post('/postanswer')
 def get_postanwer():
     x = request.form['message']
-    print(f'user typed {x}')
-
+    print(f' this is {x}')
+    g.c = f"this is a test {x}"
 
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
