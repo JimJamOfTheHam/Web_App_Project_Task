@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/postanwser')
+@app.post('/postanswer')
 def get_postanwer():
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
