@@ -15,6 +15,7 @@ def get_postanwer():
     x = request.form['message']
     print(f' this is {x}')
     g.c = f"this is a test {x}"
+    g.somevariable = ("this is a test")
 
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
