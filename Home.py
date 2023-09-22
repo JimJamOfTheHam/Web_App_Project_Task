@@ -15,12 +15,10 @@ def get_postanwer():
     x = request.form['message']
     print(f' this is {x}')
 
-    if x == 'test':
-        g.somevariable = f'test'
+    if x == 'weetbix':
+        g.somevariable = f'Correct'
     else:
         g.somevariable = f'wrong'
-        #g.c = f"this is a test {x}"
-    #g.somevariable = (f"this is a test {x}")
 
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
