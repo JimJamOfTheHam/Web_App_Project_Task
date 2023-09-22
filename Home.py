@@ -14,23 +14,21 @@ def questions():
 
 @app.post('/postanswer')
 def get_postanwer():
-    g.beforethequestion = f"Aussie kids are"
-    g.afterthequestion = f"kids. "
     x = request.form['message']
-    
-    if x == 'weetbix':
-        g.answerfeedback = f'Correct, Try This One.'
-    else:
-        g.answerfeedback = f'Incorrect Try Again.'
+    y = request.form['number']
+    if y == '1':
+        g.beforethequestion = f"Aussie kids are"
+        g.afterthequestion = f"kids. "
+        if x == 'weetbix':
+            g.answerfeedback = f'Correct, Try This One.'
+        else:
+            g.answerfeedback = f'Incorrect Try Again.'
+
+    elif y=='2':
+        print('Yes')
+
+    print ('THIS WORKS', y)
 
     return render_template('Fill_In_The_Blanks.html')
-#@app.route('/')
-#def index():
-    #x = input('Question 1: ')
-    #if x == 'Q':
-        #print ('Question')
-    #else:
-        #print("why not")
-    #return render_template('index.html')
 
 app.run(debug=True, port=2007)
