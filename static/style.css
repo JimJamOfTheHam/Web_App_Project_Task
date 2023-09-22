@@ -1,8 +1,10 @@
 h1 {
   text-align: center;
-  background-color: green;
+  background-color: darkgreen;
   }
 
+
 body{
-  background-color: darkkhaki;
+  background-image: url("/static/green\ and\ yellow\ background.jpg");
+  background-size: cover;
 }
