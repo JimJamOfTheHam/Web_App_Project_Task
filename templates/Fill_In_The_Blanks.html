@@ -9,13 +9,10 @@
 
 <body>
     <form action="/postanswer" method="post" >
-        <h2>Aussie kids are <input name="message"> kids. <input type="submit"></h2>
-        {{g.somevariable}}
-
+        <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"></h2>
+        
+        {{g.answerfeedback}}
     </form>    
-
-    
-
 </body>
 </html>
 

@@ -8,17 +8,20 @@ def index():
 
 @app.route('/questions')
 def questions():
+    g.beforethequestion = f"Aussie kids are"
+    g.afterthequestion = f"kids. "
     return render_template('Fill_In_The_Blanks.html')
 
 @app.post('/postanswer')
 def get_postanwer():
+    g.beforethequestion = f"Aussie kids are"
+    g.afterthequestion = f"kids. "
     x = request.form['message']
-    print(f' this is {x}')
-
+    
     if x == 'weetbix':
-        g.somevariable = f'Correct'
+        g.answerfeedback = f'Correct, Try This One.'
     else:
-        g.somevariable = f'wrong'
+        g.answerfeedback = f'Incorrect Try Again.'
 
     return render_template('Fill_In_The_Blanks.html')
 #@app.route('/')
