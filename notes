@@ -1,0 +1,7 @@
+elif y == '':
+        g.beforethequestion =
+        g.afterthequestion =
+        if x == ''
+            g.answerfeedback == f'Correct, Now Try This One.'
+        else:
+            g.answerfeedback = f'Incorrect Try Again'
