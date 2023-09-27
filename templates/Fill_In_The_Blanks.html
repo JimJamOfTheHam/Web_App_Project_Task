@@ -4,14 +4,16 @@
 <head>
 <h1>Fill In The Blanks</h1>
 <a href="/">Home Page</a>
-<a href="/questions"> REFRESH
+<a href="/questionsfill"> REFRESH
 </a> 
 
 <link type="text/css" href="/static/style.css" rel="stylesheet">
 
 <body>
     <h2>Make Sure That Your Answers Has No Caps. </h2>
-    <h3>Welcome To The Fill In The Blanks Game. 
+    <p>When You Get A Question Wrong You Will Have To Restart.
+    </br>
+    Welcome To The Fill In The Blanks Game. 
     </br>
     </br>
     If You Want To Play Guess The Slogans then enter game 1.
@@ -20,8 +22,9 @@
     if you want to play guesing Sayings and Phrases then enter game 2.
     </br>
     </br>
-     if you want to play guessing the Geography thenenter game 3.</h3>
-    <form action="/postanswer" method="post" >
+     if you want to play guessing the Geography thenenter game 3.</p>
+
+    <form action="/postanswerfill" method="post" >
         <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}
     </form>    
