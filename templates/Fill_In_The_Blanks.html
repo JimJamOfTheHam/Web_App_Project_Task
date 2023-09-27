@@ -3,15 +3,26 @@
 </head>
 <head>
 <h1>Fill In The Blanks</h1>
-<a href="/">Home</a>
+<a href="/">Home Page</a>
 <a href="/questions"> REFRESH
 </a> 
 
 <link type="text/css" href="/static/style.css" rel="stylesheet">
 
 <body>
+    <h2>Make Sure That Your Answers Has No Caps. </h2>
+    <h3>Welcome To The Fill In The Blanks Game. 
+    </br>
+    </br>
+    If You Want To Play Guess The Slogans then enter game 1.
+    </br>
+    </br>
+    if you want to play guesing Sayings and Phrases then enter game 2.
+    </br>
+    </br>
+     if you want to play guessing the Geography thenenter game 3.</h3>
     <form action="/postanswer" method="post" >
-        <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} Question Number <input name="number"> <input type="submit"> </h2>
+        <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}
     </form>    
 </body>
