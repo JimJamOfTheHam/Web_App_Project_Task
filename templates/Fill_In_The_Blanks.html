@@ -4,12 +4,10 @@
 <head>
 <h1>Fill In The Blanks</h1>
 <a href="/">Home Page</a>
-<a href="/questionsfill"> REFRESH
-</a> 
+<a href="/questionsfill"> REFRESH</a> 
 
 <link type="text/css" href="/static/style.css" rel="stylesheet">
 
-<body>
     <h2>Make Sure That Your Answers Has No Caps. </h2>
     <p>When You Get A Question Wrong You Will Have To Restart.
     </br>
@@ -23,7 +21,7 @@
     </br>
     </br>
      if you want to play guessing the Geography thenenter game 3.</p>
-
+<body>
     <form action="/postanswerfill" method="post" >
         <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}

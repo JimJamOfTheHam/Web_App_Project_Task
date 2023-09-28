@@ -4,5 +4,14 @@
 </head>
 <h1>Fill In The Blanks</h1>
 <a href="/">Home Page</a>
-<a href="/questionstrue"> REFRESH
+<a href="/questiontrue"> REFRESH </a>
+
+<link type="text/css" href="/static/style.css" rel="stylesheet">
+
+<body>
+    <form action="/postanswertrue" method="post">
+    <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
+        {{g.answerfeedback}}
+    </form>    
+</body>
 </html>
