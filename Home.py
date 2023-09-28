@@ -93,8 +93,8 @@ def get_postanswerfill():
 #True or False
 @app.route('/questiontrue')
 def questiontrue():
-    g.beforethequestion = f''
-    g.afterthequestion = f''
+    g.beforethequestion = f'TEST 1234'
+    g.afterthequestion = f'1234 TEST'
     return render_template('trueorfalse.html')
 
 @app.post('/postanswertrue')
