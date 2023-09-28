@@ -15,6 +15,8 @@ def questionsfill():
 @app.post('/postanswerfill')
 def get_postanswerfill():
     x = request.form['message']
+    x = x.lower()
+    
     if x == 'game 1':
         g.beforethequestion = f'Question 1. Aussie kids are'
         g.afterthequestion = f'kids.'
