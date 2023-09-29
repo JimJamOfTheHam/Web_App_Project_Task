@@ -146,4 +146,7 @@ def get_postanswertrue():
         g.beforethequestion = f''
     return render_template('trueorfalse.html')
 
+#chat 
+
+
 app.run(debug=True, port=2007)
