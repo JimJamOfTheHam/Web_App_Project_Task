@@ -120,11 +120,12 @@ def get_postanswerfill():
 
 
     else:
-        g.answerfeedback = f"Wrong"
+        g.answerfeedback = f"Click The Submit To Continue"
         g.beforethequestion = f"Because You Have Gotten A Question Wrong"
         g.afterthequestion = f"You Have To Restart The On You Were On"
         g.question = f'You Got A Question Wrong'
         g.questionnumber = f'Oh No'
+        g.restart = f'game'
     
     return render_template('Fill_In_The_Blanks.html')
 #True or False

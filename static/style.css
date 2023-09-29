@@ -1,11 +1,54 @@
 h1 {
   text-align: center;
   background-color: darkgreen;
-  font-family: 'Brush Script MT',cursive
+  font-family: 'Brush Script MT';
+  padding: 10px;
+  border: 0px;
+  margin: 0;
   }
+  body{
+    background-image: url("/static/green\ and\ yellow\ background.jpg");
+    background-size: cover;
+    margin: 0;
+  }
+p {
+  text-align: center;
+}
 
+h2 {
+  text-align: center;
+}
 
-body{
-  background-image: url("/static/green\ and\ yellow\ background.jpg");
-  background-size: cover;
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: darkgreen;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: lightskyblue;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

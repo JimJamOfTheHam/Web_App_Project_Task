@@ -12,17 +12,16 @@
     Welcome To The Fill In The Blanks Game. 
     </br>
     </br>
-    If You Want To Play Guess The Slogans then enter game.
+    If You Want To Play Guess The Slogans then enter slogans.
     </br>
     </br>
-    If you want to play guesing Sayings and Phrases then enter game.
+    If you want to play guesing Sayings and Phrases then enter phrases.
     </br>
     </br>
-     If you want to play guessing the Geography thenenter game.</p>
+     If you want to play guessing the Geography then enter geography.</p>
 <body>
     <form action="/postanswerfill" method="post"  autocomplete="off">
-
-        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
+        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}
     </form>    
 </body>
