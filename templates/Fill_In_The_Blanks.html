@@ -1,12 +1,22 @@
-<head> 
 <title>Fill In The Blanks</title>
-</head>
-<head>
-<h1>Fill In The Blanks</h1>
-<a href="/">Home Page</a>
-<a href="/questionsfill"> REFRESH</a> 
 
 <link type="text/css" href="/static/style.css" rel="stylesheet">
+
+<head>
+<h1>Fill In The Blanks</h1>
+
+<div class="sidenav">
+</br>
+</br>
+    <a href="/">Home Page</a>
+    <a href="/questionsfill"> REFRESH</a>
+    <a href="/questiontrue">True Or False</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+    </div> 
+
+
+<div class="main">
     <p>When You Get A Question Wrong You Will Have To Restart.
     </br>
     Welcome To The Fill In The Blanks Game. 
@@ -23,7 +33,8 @@
     <form action="/postanswerfill" method="post"  autocomplete="off">
         <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}
-    </form>    
+    </form>
 </body>
+</div>
 </html>
 

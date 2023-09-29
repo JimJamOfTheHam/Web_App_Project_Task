@@ -1,17 +1,25 @@
 <html>
-<head>
-<title>True Or False</title>
-</head>
-<h1>Fill In The Blanks</h1>
-<a href="/">Home Page</a>
-<a href="/questiontrue"> REFRESH </a>
-
 <link type="text/css" href="/static/style.css" rel="stylesheet">
 
+<title>True Or False</title>
+
+<h1>Fill In The Blanks</h1>
+
+<div class="sidenav">
+</br>
+</br>
+    <a href="/">Home Page</a>
+    <a href="/questionsfill"> REFRESH</a>
+    <a href="/questiontrue">True Or False</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+    </div> 
+<div class="main">
 <body>
     <form action="/postanswertrue" method="post">
     <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
         {{g.answerfeedback}}
     </form>    
 </body>
+</div>
 </html>
