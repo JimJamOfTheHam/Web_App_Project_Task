@@ -5,3 +5,21 @@ elif y == '':
             g.answerfeedback == f'Correct, Now Try This One.'
         else:
             g.answerfeedback = f'Incorrect Try Again'
+
+
+x = 'duck'
+y = 'banana'
+
+if x === 'duck':
+    if y == 'banana':
+        pass
+    elif y == 'apple':
+        pass
+elif x == 'cow':
+    if y == 'banana':
+        pass
+    elif y == 'apple':
+        pass
+
+else 
+dfsfds
