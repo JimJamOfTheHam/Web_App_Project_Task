@@ -11,13 +11,11 @@
     <a href="/">Home Page</a>
     <a href="/questionsfill"> REFRESH</a>
     <a href="/questiontrue">True Or False</a>
-    <a href="#clients">Clients</a>
-    <a href="#contact">Contact</a>
     </div> 
 
 
 <div class="main">
-    <p>When You Get A Question Wrong You Will Have To Restart.
+    <h3>When You Get A Question Wrong You Will Have To Restart.
     </br>
     Welcome To The Fill In The Blanks Game. 
     </br>
@@ -28,11 +26,11 @@
     If you want to play guesing Sayings and Phrases then enter phrases.
     </br>
     </br>
-     If you want to play guessing the Geography then enter geography.</p>
+     If you want to play guessing the Geography then enter geography.</h3>
 <body>
     <form action="/postanswerfill" method="post"  autocomplete="off">
         <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
-        {{g.answerfeedback}}
+        <h2>{{g.answerfeedback}}</h2>
     </form>
 </body>
 </div>

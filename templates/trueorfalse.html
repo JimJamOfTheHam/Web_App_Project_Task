@@ -9,16 +9,14 @@
 </br>
 </br>
     <a href="/">Home Page</a>
-    <a href="/questionsfill"> REFRESH</a>
-    <a href="/questiontrue">True Or False</a>
-    <a href="#clients">Clients</a>
-    <a href="#contact">Contact</a>
+    <a href="/questionstrue"> REFRESH</a>
+    <a href="/questionsfill">Fill In The Blanks</a>
     </div> 
 <div class="main">
 <body>
-    <form action="/postanswertrue" method="post">
-    <h2> {{g.beforethequestion}} <input name="message"> {{g.afterthequestion}} <input type="submit"> </h2>
-        {{g.answerfeedback}}
+    <form action="/postanswertrue" method="post" autocomplete="off">
+        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
+        <h2>{{g.answerfeedback}}</h2>
     </form>    
 </body>
 </div>
