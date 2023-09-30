@@ -118,19 +118,19 @@ def get_postanswerfill():
         g.question = f'Question'
         g.questionnumber = f'15'
     
-    elif x == 'start game 3' and y == '':
+    elif x == 'start game 3' and y == '15':
         g.answerfeedback = f'Correct'
         g.beforethequestion = f""
         g.afterthequestion = f''
         g.question = f'Question'
-        g.questionnumber = f''
+        g.questionnumber = f'16'
 
-    elif x == '' and y == '':
+    elif x == '' and y == '16':
         g.answerfeedback = f'Correct'
         g.beforethequestion = f""
         g.afterthequestion = f''
         g.question = f'Question'
-        g.questionnumber = f''
+        g.questionnumber = f'17'
 
     else:
         g.answerfeedback = f"Click The Submit To Continue"
@@ -145,18 +145,20 @@ def get_postanswerfill():
 #True or False
 @app.route('/questiontrue')
 def questiontrue():
-    g.beforethequestion = f"And This Is Were You Write Your Answer --->"
-    g.afterthequestion = f"<---- so write game in here to start"
+    g.beforethequestion = f"Write True When Ready"
     g.question = f'This Box Will Tell You Want Question You Are On'
     return render_template('trueorfalse.html')
 
 @app.post('/postanswertrue')
 def get_postanswertrue():
-    x = request.form['message']
+    x = request.form['post']
+    y = request.form['question']
     x = x.lower()
-    if x == 'game 1':
-        g.beforethequestion = f'True or False'
-        g.afterthequestion = f'False or True'
+    if x == 'true':
+        g.beforethequestion == f'Does a crocodile cry when it eats food.'
+
+    elif x == 'true':
+        g.beforethequestion == f'Yes It Works'
 
     else:
         g.beforethequestion = f''

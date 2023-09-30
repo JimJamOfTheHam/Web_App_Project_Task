@@ -29,7 +29,9 @@
      If you want to play guessing the Geography then enter geography.</h3>
 <body>
     <form action="/postanswerfill" method="post"  autocomplete="off">
-        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
+        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly>
+        </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'>
+         {{g.afterthequestion}} <input type="submit"> </h2>
         <h2>{{g.answerfeedback}}</h2>
     </form>
 </body>

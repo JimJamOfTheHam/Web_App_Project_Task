@@ -3,7 +3,7 @@
 
 <title>True Or False</title>
 
-<h1>Fill In The Blanks</h1>
+<h1>True Or False</h1>
 
 <div class="sidenav">
 </br>
@@ -13,11 +13,19 @@
     <a href="/questionsfill">Fill In The Blanks</a>
     </div> 
 <div class="main">
-<body>
-    <form action="/postanswertrue" method="post" autocomplete="off">
-        <h2> {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly> </br> {{g.beforethequestion}} <input name="message" value='{{g.restart}}'> {{g.afterthequestion}} <input type="submit"> </h2>
-        <h2>{{g.answerfeedback}}</h2>
-    </form>    
+<body> 
+    <h2>
+    <form action="/postanswertrue" method='post'>
+        
+        {{g.question}} <input name='question' value='{{g.questionnumber}}' readonly>
+        </br></br>
+        {{g.beforethequestion}}
+        </br>
+        <input placeholder='True Or False'>
+        <input type="submit">
+    </form>
+</h2>
 </body>
 </div>
 </html>
+
