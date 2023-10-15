@@ -1,9 +1,19 @@
 <h1> Chatroom!</h1>
 
+{% if 'username' in session %}
+You are logged in as: {{session['username']}}
+<a href = "/logout">LOG OUT</a>
+{% else %}
+<a href = "/login">LOG IN</a>
+{% endif %}
+
+
 <h2> Posts</h2>
 
 <ul>
-    <li> Hello</li>
+    {% for post in posts %}
+    <li>{{post['username']}}: {{post['message']}}</li>
+    {% endfor %}
 </ul>
 
 What is your status today?
