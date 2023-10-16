@@ -43,7 +43,7 @@ def get_postanswerfill():
         g.question = f'Question'
         g.questionnumber = f'3'
 
-    elif x == 'crackel' and y == '3':
+    elif x == 'crackle' and y == '3':
         g.answerfeedback = f'Correct'
         g.afterthequestion = f"licken' good !."
         g.question = f'Question'
