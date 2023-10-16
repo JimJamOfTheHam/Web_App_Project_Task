@@ -1,4 +1,5 @@
 from flask import *
+import database 
 
 app = Flask(__name__)
 
@@ -18,7 +19,6 @@ def get_postanswerfill():
     x = request.form['message']
     y = request.form['question']
     x = x.lower()
-
 
     if x == 'start':
         g.beforethequestion = f'Aussie kids are'
@@ -120,15 +120,37 @@ def get_postanswerfill():
     
     elif x == 'start game 3' and y == '15':
         g.answerfeedback = f'Correct'
-        g.beforethequestion = f""
+        g.beforethequestion = f"The capital of Russia is"
         g.afterthequestion = f''
         g.question = f'Question'
         g.questionnumber = f'16'
 
-    elif x == '' and y == '16':
+    elif x == 'Moscow' and y == '16':
         g.answerfeedback = f'Correct'
-        g.beforethequestion = f""
+        g.beforethequestion = f"The capital of Australia is"
         g.afterthequestion = f''
+        g.question = f'Question'
+        g.questionnumber = f'17'
+
+
+    elif x == 'Canberra' and y == '17':
+        g.answerfeedback = f'Correct'
+        g.beforethequestion = f"Mount Everest is in"
+        g.afterthequestion = f''
+        g.question = f'Question'
+        g.questionnumber = f'18'
+
+    elif x == 'Nepal' and y == '19':
+        g.answerfeedback = f'Correct'
+        g.beforethequestion = f"River Nile is located in"
+        g.afterthequestion = f''
+        g.question = f'Question'
+        g.questionnumber = f'20'
+
+    elif x == 'Egypt' and y == '20':
+        g.answerfeedback = f'You Are Welcomed To Try It Again Or Play A Diffrent Game'
+        g.beforethequestion = f"Well Done You Have "
+        g.afterthequestion = f'All Of The Fill In The Blank'
         g.question = f'Question'
         g.questionnumber = f'17'
 
@@ -143,26 +165,53 @@ def get_postanswerfill():
     return render_template('Fill_In_The_Blanks.html')
 
 #True or False
-@app.route('/questiontrue')
-def questiontrue():
-    g.beforethequestion = f"Write True When Ready"
-    g.question = f'This Box Will Tell You Want Question You Are On'
-    return render_template('trueorfalse.html')
 
-@app.post('/postanswertrue')
-def get_postanswertrue():
-    x = request.form['post']
+@app.route('/questionfortrue')
+def questionsfortrue():
+    g.beforethequestion = f"this is were you will write"
+    g.afterthequestion = f"To Start The Game Write Start"
+    g.question = f'this will tell you want quesiton you are on'
+    g.restart = f''
+    return render_template('true.html')
+
+@app.post('/answerfortrue')
+def get_answerfortrue():
+    x = request.form['message']
     y = request.form['question']
     x = x.lower()
-    if x == 'true':
-        g.beforethequestion == f'Does a crocodile cry when it eats food.'
 
-    elif x == 'true':
-        g.beforethequestion == f'Yes It Works'
+    if x == ('start'):
+        g.question = f"Question"
+        g.questionnumber = f"1"
+        g.beforethequestion = f"Do crocodiles cry when they eat food?"
+
+    #elif x == ("true") and y == (""):
+        #g.question == f"Question"
+        #g.questionnumber == f""
+        #g.beforethequestion == f""
+
+    elif x == ("true") and y == ("1"):
+        g.question = f"Question"
+        g.questionnumber = f"2"
+        g.beforethequestion = f"Bats are Blind"
+        g.answerfeedback = f"Correct. Fun "
+
+    elif x == ("false") and y == ("2"):
+       g.question = "Question"
+       g.questionnumber = "3"
+       g.beforethequestion = f"An ostrich has an eye larger than its brain"
+
+    elif x == ("true") and y == ("3"):
+        g.question = f"Question"
+        g.questionnumber = f"4"
+        g.beforethequestion = f"There are dolphins in the Amazon River in South America"
 
     else:
-        g.beforethequestion = f''
-    return render_template('trueorfalse.html')
+        g.beforethequestion = f"You Have Writen A Answer Wrong, Looks Like You Have To Start Again."
+
+    return render_template('true.html')
+
+
 
 #chat 
 

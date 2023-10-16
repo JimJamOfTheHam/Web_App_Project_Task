@@ -1,0 +1,31 @@
+<title>Word Guess</title>
+
+<link type="text/css" href="/static/style.css" rel="stylesheet">
+
+<head>
+<h1>Word Guess</br> <u>Not Finished </u></h1>
+
+<div class="sidenav">
+</br>
+</br>
+    <a href="/">Home Page</a>
+    <a href="/questionfortrue"> REFRESH</a>
+    <a href="/questionsfill">Fill In The Blanks</a>
+</div> 
+
+<div class="main">
+    <form action="/answerfortrue" method="post"  autocomplete="off">
+        <h2> 
+            {{g.question}} 
+            <input name='question' value='{{g.questionnumber}}' readonly>
+        </br> 
+        {{g.beforethequestion}} 
+        <input name="message" value='{{g.restart}}' placeholder="Your Question">
+         {{g.afterthequestion}} 
+         <input type="submit"> 
+        </h2>
+        <h2>
+            {{g.answerfeedback}}
+        </h2>
+    </form>
+</div>
