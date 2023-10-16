@@ -3,7 +3,7 @@ import dataset
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/homepage')
 def index():
     return render_template('index.html')
 #Fill In The Blanks
