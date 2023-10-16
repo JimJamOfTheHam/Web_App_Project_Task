@@ -1,3 +1,11 @@
+
+<style>
+.profile-image {
+    width: 30px;
+}
+</style>
+
+
 <h1> Chatroom!</h1>
 
 {% if 'username' in session %}
@@ -7,11 +15,13 @@ You are logged in as: {{session['username']}}
 <a href = "/login">LOG IN</a>
 {% endif %}
 
+<a href ='/set_picture'>set profile picture</a>
 
 <h2> Posts</h2>
 
 <ul>
     {% for post in posts %}
+    <img src = "{{post['picture']}}" >
     <li>{{post['username']}}: {{post['message']}}</li>
     {% endfor %}
 </ul>
@@ -22,3 +32,4 @@ What is your status today?
 <input type="text" name="message">
 <input type="submit">
 </form>
+

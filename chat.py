@@ -15,6 +15,18 @@ def homepage():
 def login():
     return render_template('login.html')
 
+@app.route('/set_picture')
+def set_picture():
+    return render_template('set_picture.html')
+
+@app.route('/set_picture_post', methods= ['post'])
+def set_picture_post():
+    file = request.files['file']
+    filename_to_save = 'static/uploads/' + file.filename
+    file.save (filename_to_save)
+    session ['profile_picture_url'] = filename_to_save
+    return redirect ('/')
+
 @app.route('/logout')
 def logout():
     del session ['username']
@@ -30,7 +42,8 @@ def login_post():
 def createpost():
     post_dictionary = {
         'message' : request.form ['message'],
-        'username' :session['username']
+        'username' :session['username'],
+        'picture' : session['profile_picture_url']
     }
     db['posts'].insert(post_dictionary) 
 
