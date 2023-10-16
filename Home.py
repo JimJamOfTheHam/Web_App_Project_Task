@@ -2,6 +2,8 @@ from flask import *
 import dataset 
 
 app = Flask(__name__)
+db = dataset.connect('sqlite:///chatroom.db')
+app.secret_key = 'cactus'
 
 @app.route('/homepage1')
 def index():
