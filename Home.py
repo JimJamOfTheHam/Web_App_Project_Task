@@ -5,7 +5,7 @@ app = Flask(__name__)
 db = dataset.connect('sqlite:///chatroom.db')
 app.secret_key = 'cactus'
 
-@app.route('/homepage1')
+@app.route('/')
 def index():
     return render_template('index.html')
 #Fill In The Blanks
@@ -217,7 +217,7 @@ def get_answerfortrue():
 
 
 #chat 
-@app.route("/")
+@app.route("/homepage")
 def homepage():
     if 'username' not in session:
         return redirect ('/login')
@@ -237,17 +237,17 @@ def set_picture_post():
     filename_to_save = 'static/uploads/' + file.filename
     file.save (filename_to_save)
     session ['profile_picture_url'] = filename_to_save
-    return redirect ('/')
+    return redirect ('/homepage')
 
 @app.route('/logout')
 def logout():
     del session ['username']
-    return redirect ('/')
+    return redirect ('/homepage')
 
 @app.route('/login_post', methods=['post'])
 def login_post():
    session['username'] = (request.form['username'])
-   return redirect('/')
+   return redirect('/homepage')
 
 
 @app.route('/createpost', methods=['post'])
@@ -259,7 +259,7 @@ def createpost():
     }
     db['posts'].insert(post_dictionary) 
 
-    return redirect('/') 
+    return redirect('/homepage') 
 
 
 
