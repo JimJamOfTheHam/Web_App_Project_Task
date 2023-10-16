@@ -1,13 +1,36 @@
+
+<style>
+.profile-image {
+    width: 100px;
+    border-radius: 40%;
+}
+</style>
+
+
 <h1> Chatroom!</h1>
+
+{% if 'username' in session %}
+You are logged in as: {{session['username']}}
+<a href = "/logout">LOG OUT</a>
+{% else %}
+<a href = "/login">LOG IN</a>
+{% endif %}
+
+<a href ='/set_picture'>set profile picture</a>
 
 <h2> Posts</h2>
 
 <ul>
-    <li> Hello</li>
+    {% for post in posts %}
+    <li><img src = "{{post['picture']}}" class="profile-image" >
+    {{post['username']}}: {{post['message']}}</li>
+    {% endfor %}
 </ul>
 
 What is your status today?
-<form action = "/create post" method = "post">
+
+<form action = "/createpost" method = "post" autocomplete="off">
 <input type="text" name="message">
 <input type="submit">
 </form>
+
