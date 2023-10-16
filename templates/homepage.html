@@ -1,7 +1,8 @@
 
 <style>
 .profile-image {
-    width: 30px;
+    width: 100px;
+    border-radius: 40%;
 }
 </style>
 
@@ -21,14 +22,14 @@ You are logged in as: {{session['username']}}
 
 <ul>
     {% for post in posts %}
-    <img src = "{{post['picture']}}" >
-    <li>{{post['username']}}: {{post['message']}}</li>
+    <li><img src = "{{post['picture']}}" class="profile-image" >
+    {{post['username']}}: {{post['message']}}</li>
     {% endfor %}
 </ul>
 
 What is your status today?
 
-<form action = "/createpost" method = "post">
+<form action = "/createpost" method = "post" autocomplete="off">
 <input type="text" name="message">
 <input type="submit">
 </form>
